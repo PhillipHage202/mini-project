@@ -1,15 +1,24 @@
-from flask import Flask
+from flask import Flask, Response, request
+
+import random
 app = Flask(__name__)
 
-animals = {'cow':'moo', 'dog':'woof', 'cat':'meow'}
 
 @app.route('/animal')
-def get_animal():
-    return jsonify(random.choice(animals).key())
+def animal():
+    animals = ["cow","dog","cat"]
+    return Response(random.choices(animals), mimetype="text/plain")
 
 @app.route('/noise/<string:animal>', methods=['POST'])
-def get_sound(animal):
-    return jsonify(animals.get(animal))
+def noise (animal):
+    animal = request.data.decode('utf-8')
+    if animal == "cow":
+        noise == "moo"
+    elif animal == "dog":
+        noise == "woof"
+    elif animal == "cat":
+        noise == "meow"
+    return render_template ('index.html', animal = animal.text, noise=noise.text)
 
 if __name__ == '__main__':
-    app.run(port=5001, host='0.0.0.0/0') 
+    app.run(debug=True, host='0.0.0.0', port=5001) 

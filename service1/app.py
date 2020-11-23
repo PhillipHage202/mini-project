@@ -1,9 +1,16 @@
-from flask import Flask
-app = Flask(__name__)
+from flask import Flask, render_template
 
-@app.route('/')
+import requests
+
+app = Flask(__name__)
+@app.route('/', methods =['GET'])
 def index():
-    return("")
+    # get animal
+    animal = requests.get("http://localhost:5001/animal")
+    # get noise
+    noise = requests.post("http://localhost:5001/noise", data=animal.text)
+
+    return render_template ('index.html', animal=animal.text, noise=noise.text )
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True, host='0.0.0.0')
+    app.run( debug=True, host='0.0.0.0')

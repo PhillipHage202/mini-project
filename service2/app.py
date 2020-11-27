@@ -9,16 +9,16 @@ def animal():
     animals = ["cow","dog","cat"]
     return Response(random.choices(animals), mimetype="text/plain")
 
-@app.route('/noise/<string:animal>', methods=['POST'])
-def noise (animal):
+@app.route('/noise', methods=['POST'])
+def noise ():
     animal = request.data.decode('utf-8')
     if animal == "cow":
-        noise == "moo"
+        noise = "moo"
     elif animal == "dog":
-        noise == "woof"
-    elif animal == "cat":
-        noise == "meow"
-    return render_template ('index.html', animal = animal.text, noise=noise.text)
+        noise = "woof"
+    else:
+        noise = "meow"
+    return Response (noise, mimetype= "text/plain")
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5001) 

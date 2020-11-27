@@ -12,9 +12,9 @@ class TestResponse(TestBase):
     def test_animal(self):
     # We will mock a response of 1 and test that we get football returned.
         with patch('requests.get') as g:
-            with patch ("request.post") as p:
+            with patch ("requests.post") as p:
                 g.return_value.text = "cat"
                 p.return_value.text = "meow"
 
             response = self.client.get(url_for('index'))
-            self.assertIn(b'cat goes meow', response.data)
+            self.assertIn(b'cat makes a noise meow', response.data)

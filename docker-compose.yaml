@@ -1,13 +1,14 @@
 version: '3.7'
 services:
   service1: 
-  build: ./service1
+  build: ./service1 #folder
   image: mini-project/service1
   deploy:
           replicas: 4
   ports:
    - target:5000
   published: 5000
+  protocol: tcp 
   
 
   service2:
@@ -17,5 +18,6 @@ services:
           replicas: 4
     ports:
     - target:5001
-    published: 5001
+    # dont need to published port cuz u dont want user to use this port
+    protocol: tcp 
     

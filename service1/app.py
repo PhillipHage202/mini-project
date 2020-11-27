@@ -1,11 +1,11 @@
-from flask import Flask,  request
-
+from flask import Flask, render_template
 import requests
 
 app = Flask(__name__)
 @app.route('/', methods =['GET'])
 def index():            
     # get animal
+<<<<<<< HEAD
     animal = requests.get("http://34.105.151.78:5001/animal")
     # get noise
     noise = requests.post("http://34.105.151.78:5001/noise", data=animal.text)

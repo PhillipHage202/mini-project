@@ -11,38 +11,60 @@ def name():
     wep = data[0]
     element = data[1]
 
-    if wep == "Staff" and element == "water":
+    if wep == "Staff" and element == "Water":
         name = "Jean the Mage"
-    elif  wep == "2 Star" and element == "water":
-        name = "Ola"
-    elif  wep == "3 Star" and element == "water":
+    elif  wep == "Spear" and element == "Water":
+        name = "Aqua Warrior"
+    elif  wep == "Fan" and element == "Water":
         name = "Reb"
-    elif  wep == "4 Star" and element == "water":
+    elif  wep == "Axe" and element == "Water":
         name = "Ferg"
-    elif  wep == "5 Star" and element == "water":
+    elif  wep == "Hammer" and element == "Water":
         name = "Rookie"
     
-    elif  wep == "1 Star" and element == "fire":
+    elif  wep == "Sword" and element == "Fire":
         name = "Lilins"
-    elif  wep == "2 Star" and element == "fire":
+    elif  wep == "Fan" and element == "Fire":
         name = "Joola"
-    elif  wep == "3 Star" and element == "fire":
+    elif  wep == "Spear" and element == "Fire":
         name = "Poos"
-    elif  wep == "4 Star" and element == "fire":
+    elif  wep == "Crossbow" and element == "Fire":
         name = "Lollivan"
-    elif  wep == "5 Star" and element == "fire":
+    elif  wep == "Gun" and element == "Fire":
         name = "Hecka"
+    
+    elif  wep == "Sword" and element == "Air":
+        name = "Lilins"
+    elif  wep == "Axe" and element == "Air":
+        name = "Joola"
+    elif  wep == "Sword" and element == "Air":
+        name = "Poos"
+    elif  wep == "Fan" and element == "Air":
+        name = "Lollivan"
+    elif  wep == "Hammer" and element == "Air":
+        name = "Hecka"
+    
+    elif  wep == "Sword" and element == "Earth":
+        name = "Rocky"
+    elif  wep == "Fan" and element == "Earth":
+        name = "Hoop"
+    elif  wep == "Gun" and element == "Earth":
+        name = "King"
+    elif  wep == "Staff" and element == "Earth":
+        name = "Hector"
+    elif  wep == "Hammer" and element == "Earth":
+        name = "Lee"
 
-    elif  wep == "1 Star" and element == "lightning":
-        name = "Abanes"
-    elif  wep == "2 Star" and element == "lightning":
-        name = "Rasmas"
-    elif  wep == "3 Star" and element == "lightning":
-        name = "Goompa"
-    elif  wep == "4 Star" and element == "lightning":
-        name = "Marar"
+    elif  wep == "Crossbow" and element == "Lightning":
+        name = "Andtook"
+    elif  wep == "Gun" and element == "Lightning":
+        name = "Vigo"
+    elif  wep == "Spear" and element == "Lightning":
+        name = "Vino"
+    elif  wep == "Hammer" and element == "Lightning":
+        name = "Jack"
     else:
-        name = "Jell"
+        name = "Dara"
 
 
     return Response(name, mimetype="text/plain")

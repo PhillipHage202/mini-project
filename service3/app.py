@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/element', methods=['GET'])
 def element():
-    element = ["water", "fire", "lightning"]
+    element = ["Water", "Fire", "Lightning", "Earth", "Air" ]
     return Response(random.choices(element), mimetype="text/plain")
 
 

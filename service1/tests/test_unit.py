@@ -14,8 +14,8 @@ class TestResponse(TestBase):
     def test_view(self):
         with requests_mock.Mocker() as r:
             r.get("http://localhost:5001/wep", text="Axe")
-            r.get("http://localhost:5002/element", text="fire")
-            r.post("http://localhost:5003/name", text="Jell")
+            r.get("http://localhost:5002/element", text="Fire")
+            r.post("http://localhost:5003/name", text="Paul")
             response = self.client.get(url_for('index'))
             self.assertEqual(response.status_code, 500)
 

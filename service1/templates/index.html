@@ -1,5 +1,9 @@
-<body>
-    <h1>you pulled a {{ rating }} its element is {{ element }} and its called {{ name }}</h1>
-    <h2>Refresh for a new character</h2> 
-</body>
-</html>
+{% block body_content %}
+<center><br><h1>{{ name }} </h1>
+<h3>Your elemental power is: {{ element }} </h3>
+<h3>Your weapon is: {{ wep }}</h3>
+<div class='form'>
+        <form action="{{ url_for('index') }}">
+        <button type="submit">Generate</button>
+        </form></center>
+{% endblock body_content %}

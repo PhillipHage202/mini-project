@@ -9,11 +9,12 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
 class TestResponse(TestBase):
-    def test_page(self):
-        with patch("requests.get") as g:
-            with patch("requests.post") as p:
-                g.return_value.text = "Fire"
-                p.return_value.text = "Jell"
+    def test_view(self):
+        with patch( "requests.get" ) as g:
+            with patch( "requests.post" ) as p:
+                g.return_value.text = "Axe"
+                p.return_value.text = "Water"
 
                 response = self.client.get(url_for("index"))
-                self.assertEqual(response.status_code, 200)
+                
+                self.assertIn( b'Jell', response.data )

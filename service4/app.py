@@ -8,38 +8,38 @@ app = Flask(__name__)
 def name():
     character = request.data.decode('utf-8')
     data = character.split(",")
-    level = data[0]
+    wep = data[0]
     element = data[1]
 
-    if level == "1 Star" and element == "water":
-        name = "Jean"
-    elif  level == "2 Star" and element == "water":
+    if wep == "Staff" and element == "water":
+        name = "Jean the Mage"
+    elif  wep == "2 Star" and element == "water":
         name = "Ola"
-    elif  level == "3 Star" and element == "water":
+    elif  wep == "3 Star" and element == "water":
         name = "Reb"
-    elif  level == "4 Star" and element == "water":
+    elif  wep == "4 Star" and element == "water":
         name = "Ferg"
-    elif  level == "5 Star" and element == "water":
+    elif  wep == "5 Star" and element == "water":
         name = "Rookie"
     
-    elif  level == "1 Star" and element == "fire":
+    elif  wep == "1 Star" and element == "fire":
         name = "Lilins"
-    elif  level == "2 Star" and element == "fire":
+    elif  wep == "2 Star" and element == "fire":
         name = "Joola"
-    elif  level == "3 Star" and element == "fire":
+    elif  wep == "3 Star" and element == "fire":
         name = "Poos"
-    elif  level == "4 Star" and element == "fire":
+    elif  wep == "4 Star" and element == "fire":
         name = "Lollivan"
-    elif  level == "5 Star" and element == "fire":
+    elif  wep == "5 Star" and element == "fire":
         name = "Hecka"
 
-    elif  level == "1 Star" and element == "lightning":
+    elif  wep == "1 Star" and element == "lightning":
         name = "Abanes"
-    elif  level == "2 Star" and element == "lightning":
+    elif  wep == "2 Star" and element == "lightning":
         name = "Rasmas"
-    elif  level == "3 Star" and element == "lightning":
+    elif  wep == "3 Star" and element == "lightning":
         name = "Goompa"
-    elif  level == "4 Star" and element == "lightning":
+    elif  wep == "4 Star" and element == "lightning":
         name = "Marar"
     else:
         name = "Jell"

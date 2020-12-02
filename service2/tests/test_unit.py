@@ -7,34 +7,15 @@ class TestBase(TestCase):
     def create_app(self):
         return app
 
+class TestViews(TestBase):
+    def test_homepage_view(self):
+        response = self.client.get(url_for('home'))
+        self.assertEqual(response.status_code, 200)
 
-class TestAnimals(TestBase):
-
-    def test_animal(self):
-        animals = [b"cow" , b"dog", b"cat"]
-        response = self.client.get(url_for('animal'))
-        self.assertIn(response.data, animals)
-
-    def test_noise_cow(self):
-        response = self.client.post(
-            url_for('noise'),
-            data=cow,
-            follow_redirects=True
-        )
-        self.assertIn(b'moo', response.data)
-    
-    def test_noise_dog(self):
-        response = self.client.post(
-            url_for('noise'),
-            data=dog,
-            follow_redirects=True
-        )
-        self.assertIn(b'woof', response.data)
-
-    def test_noise_cat(self):
-        response = self.client.post(
-            url_for('noise'),
-            data=cat,
-            follow_redirects=True
-        )
-        self.assertIn(b'meow', response.data)
+    def test_fortune_view(self):
+        with requests_mock.Mocker() as r:
+            r.get("http://service2:5001/fortune/colour", text="blue")
+            r.get("http://service3:5002/fortune/number", text="1")
+            r.post("http://service4:5003/fortune/fortune", text="We do not know the future, but have a cookie.")
+            response = self.client.get(url_for('fortune'))
+            self.assertEqual(response.status_code, 200)

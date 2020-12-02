@@ -34,15 +34,15 @@ def name():
         name = "Hecka"
     
     elif  wep == "Sword" and element == "Air":
-        name = "Lilins"
+        name = "Lilly"
     elif  wep == "Axe" and element == "Air":
-        name = "Joola"
+        name = "Waz"
     elif  wep == "Sword" and element == "Air":
-        name = "Poos"
+        name = "Ben"
     elif  wep == "Fan" and element == "Air":
-        name = "Lollivan"
+        name = "Dan"
     elif  wep == "Hammer" and element == "Air":
-        name = "Hecka"
+        name = "Julia"
     
     elif  wep == "Sword" and element == "Earth":
         name = "Rocky"
@@ -56,7 +56,7 @@ def name():
         name = "Lee"
 
     elif  wep == "Crossbow" and element == "Lightning":
-        name = "Andtook"
+        name = "Anook"
     elif  wep == "Gun" and element == "Lightning":
         name = "Vigo"
     elif  wep == "Spear" and element == "Lightning":

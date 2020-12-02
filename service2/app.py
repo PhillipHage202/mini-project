@@ -1,24 +1,13 @@
-from flask import Flask, Response
-
+from flask import Flask, Response, request
 import random
+
 app = Flask(__name__)
 
+@app.route('/rating', methods=['GET'])
+def rating():
+    ratings = ["1 Star", "2 Star", "3 Star", "4 Star", "5 Star"]
+    return Response(random.choices(ratings), mimetype="text/plain")
 
-@app.route('/animal')
-def animal():
-    animals = ["cow","dog","cat"]
-    return Response(random.choices(animals), mimetype="text/plain")
 
-@app.route('/noise', methods=['POST'])
-def noise ():
-    animal = request.data.decode('utf-8')
-    if animal == "cow":
-        noise = "moo"
-    elif animal == "dog":
-        noise = "woof"
-    else:
-        noise = "meow"
-    return Response (noise, mimetype= "text/plain")
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5001) 
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5001)

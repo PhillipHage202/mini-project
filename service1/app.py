@@ -1,16 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template 
 import requests
 
 app = Flask(__name__)
-@app.route('/', methods =['GET'])
-def index():            
-    # get animal
-<<<<<<< HEAD
-    animal = requests.get("http://34.105.151.78:5001/animal")
-    # get noise
-    noise = requests.post("http://34.105.151.78:5001/noise", data=animal.text)
 
-    return render_template ('index.html', animal=animal.text, noise=noise.text )
+@app.route('/', methods=['GET'])
+def index():
+    #gets a rating
+    rating = requests.get("http://localhost:5001/rating")
+    #gets element
+    element = requests.get("http://localhost:5002/element")
+    #gets character name
+    character = str(rating.text) + "," + str(element.text)
+    name = requests.post("http://localhost:5003/name", data=character)
 
-if __name__ == '__main__':
-    app.run( debug=True, host='0.0.0.0', port=5000)
+
+    return render_template('index.html', rating=rating.text, element=element.text, name=name.text)
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0')

@@ -1,3 +1,9 @@
-flask
-flask-testing
+Flask==1.1.1
+Jinja2==2.10.3
 requests
+pytest
+pytest-cov
+flask-testing
+pymysql
+flask_sqlalchemy
+requests_mock

@@ -3,10 +3,10 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/rating', methods=['GET'])
-def rating():
-    ratings = ["1 Star", "2 Star", "3 Star", "4 Star", "5 Star"]
-    return Response(random.choices(ratings), mimetype="text/plain")
+@app.route('/wep', methods=['GET'])
+def wep():
+    wep = ["Axe", "Hammer", "Sword", "Guns", "Staff"]
+    return Response(random.choices(wep), mimetype="text/plain")
 
 
 if __name__ == "__main__":

@@ -12,6 +12,6 @@ class TestBase(TestCase):
 
 
 class Test_view(TestBase):
-    def test__wep_view(self):
-        response = self.client.get(url_for('wep'))
+    def test__element_view(self):
+        response = self.client.get(url_for('element'))
         self.assertEquals(response.status_code,200)

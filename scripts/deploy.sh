@@ -1,1 +1,1 @@
-docker stack deploy -- compose-file docker -compose.yaml
+docker stack deploy -- compose-file docker -compose.yaml practical-project

@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/wep', methods=['GET'])
 def wep():
-    wep = ["Axe", "Hammer", "Sword", "Gun", "Staff", "Crossbow", "Fan", "Spear"  ]
+
+    wep = ["Axe", "Hammer", "Sword", "Gun", "Staff", "Crossbow", "Fan", "Spear"]
+
     return Response(random.choices(wep), mimetype="text/plain")
 
 

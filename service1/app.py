@@ -7,20 +7,21 @@ from os import getenv
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = getenv('DATABASE_URI')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = getenv('MY_SECRET_KEY')
-db = SQLAlchemy(app)
 
-db.drop_all()
-db.create_all()
+#'''app.config['SQLALCHEMY_DATABASE_URI'] = getenv('DATABASE_URI')
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+#app.config['SECRET_KEY'] = getenv('MY_SECRET_KEY')
+#db = SQLAlchemy(app)
 
-class Char(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    wep = db.Column(db.String(10))
-    element = db.Column(db.String(200)) 
-    name = db.Column(db.String(200)) 
+#db.drop_all()
+#db.create_all()
 
+#class Char(db.Model):
+#    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+ #   wep = db.Column(db.String(10))
+  #  element = db.Column(db.String(200)) 
+   # name = db.Column(db.String(200)) '''
+#
 @app.route('/', methods=['GET'])
 def index():
     #gets a wep

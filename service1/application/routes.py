@@ -11,12 +11,12 @@ def home():
 @app.route('/get_char', methods=['GET'])
 def index():
     #gets a wep
-    wep = requests.get("http://localhost:5001/wep")
+    wep = requests.get("http://service1:5001/wep")
     #gets element
-    element = requests.get("http://localhost:5002/element")
+    element = requests.get("http://service2:5002/element")
     #gets character name
     character = str(wep.text) + "," + str(element.text)
-    name = requests.post("http://localhost:5003/name", data=character)
+    name = requests.post("http://service3:5003/name", data=character)
 
     add_char = Char(wep=wep.text, element=element.text, name=name.text)
     db.session.add(add_char)

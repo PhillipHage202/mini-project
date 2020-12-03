@@ -1,8 +1,8 @@
 version: '3.7'
 services:
   service1: 
-  build: ./service1 #folder
-  image: mini-project/service1
+  build: ./service1 
+  image: practical-project/service1
   deploy:
           replicas: 4
   ports:
@@ -13,31 +13,33 @@ services:
 
   service2:
     build: ./service2
-    image: mini-project/service2
+    image: practical-project/service2
     deploy:
           replicas: 4
     ports:
     - target:5001
-    # dont need to published port cuz u dont want user to use this port
+    published: 5001
     protocol: tcp 
     
   service3:
     build: ./service3
-    image: mini-project/service3
+    image: practical-project/service3
     deploy:
           replicas: 4
     ports:
-    - target:5001
-    # dont need to published port cuz u dont want user to use this port
+    - target:5002
+    published: 5002
+    
     protocol: tcp 
     
   service4:
     build: ./service4
-    image: mini-project/service4
+    image: practical-project/service4
     deploy:
           replicas: 4
     ports:
-    - target:5001
-    # dont need to published port cuz u dont want user to use this port
+    - target:5003
+    published: 5003
+   
     protocol: tcp 
     

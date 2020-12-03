@@ -13,5 +13,5 @@ class TestBase(TestCase):
 
 class Test_view(TestBase):
     def test__name_view(self):
-        response = self.client.get(url_for('name'))
-        self.assertEquals(response.status_code,405)
+        response = self.client.post(url_for('name'), data="Axe , Fire")
+        self.assertEquals(response.status_code,200)

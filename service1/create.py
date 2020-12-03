@@ -1,4 +1,7 @@
+<<<<<<< HEAD
   
+=======
+>>>>>>> developer
 from application import db
 
 

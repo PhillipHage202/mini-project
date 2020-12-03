@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-from flask import Flask, render_template, Response, request
-import requests
-import random
-
-app = Flask(__name__)
+from application import app
+from flask import request, Response
+from random import randint
 
 @app.route('/name', methods=['POST'])
 def name():
@@ -35,15 +32,15 @@ def name():
         name = "Hecka"
     
     elif  wep == "Sword" and element == "Air":
-        name = "Lilins"
+        name = "Lilly"
     elif  wep == "Axe" and element == "Air":
-        name = "Joola"
+        name = "Waz"
     elif  wep == "Sword" and element == "Air":
-        name = "Poos"
+        name = "Ben"
     elif  wep == "Fan" and element == "Air":
-        name = "Lollivan"
+        name = "Dan"
     elif  wep == "Hammer" and element == "Air":
-        name = "Hecka"
+        name = "Julia"
     
     elif  wep == "Sword" and element == "Earth":
         name = "Rocky"
@@ -57,7 +54,7 @@ def name():
         name = "Lee"
 
     elif  wep == "Crossbow" and element == "Lightning":
-        name = "Andtook"
+        name = "Anook"
     elif  wep == "Gun" and element == "Lightning":
         name = "Vigo"
     elif  wep == "Spear" and element == "Lightning":
@@ -69,11 +66,3 @@ def name():
 
 
     return Response(name, mimetype="text/plain")
-
-if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=5003)
-=======
-from application import app
-if __name__ == '__main__':
-    app.run(port=5003, host='0.0.0.0', debug=True)
->>>>>>> developer

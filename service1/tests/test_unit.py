@@ -10,7 +10,11 @@ from os import getenv
 class TestBase(TestCase):
     def create_app(self):
         config_name = 'testing'
+<<<<<<< HEAD
         app.config.update(SQLALCHEMY_DATABASE_URI= 'sqlite:///data.db',
+=======
+        app.config.update(SQLALCHEMY_DATABASE_URI='sqlite:///data.db',
+>>>>>>> developer
                 SECRET_KEY=getenv('TEST_SECRET_KEY'),
                 WTF_CSRF_ENABLED=False,
                 DEBUG=True
@@ -43,6 +47,4 @@ class TestResponse(TestBase):
             r.get("http://localhost:5002/element", text="Fire")
             r.post("http://localhost:5003/name", text="Dara")
             response = self.client.get(url_for('index'))
-            self.assertEqual(response.status_code, 500)
-
-
+            self.assertEqual(response.status_code, 200)

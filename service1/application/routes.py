@@ -5,7 +5,8 @@ import requests
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('index.html', title='Home')
+    char_data = Char.query.all()
+    return render_template('index.html', chars=char_data)
 
 
 @app.route('/get_char', methods=['GET'])

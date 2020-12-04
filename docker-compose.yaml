@@ -6,24 +6,39 @@ services:
     ports: 
     - target: 5000
       published: 5000
-      protocol: tcp 
+      protocol: tcp
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+      SECRET_KEY: ${MY_SECRET_KEY}
+    deploy:
+      replicas: 2
+
+
   service2: 
     image: phage2022/service2
     build: ./service2
     ports: 
     - target: 5001
       protocol: tcp 
+    deploy:
+      replicas: 2
+
   service3: 
-   image: phage2022/service3
-   build: ./service3
-   ports: 
+    image: phage2022/service3
+    build: ./service3
+    ports: 
     - target: 5002
       protocol: tcp 
+    deploy:
+      replicas: 2
+
   service4: 
     image: phage2022/service4
     build: ./service4
     ports: 
     - target: 5003
       protocol: tcp 
+    deploy:
+      replicas: 2
   
 

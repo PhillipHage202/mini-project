@@ -1,5 +1,5 @@
 from flask import render_template
-from application import app, db
+from application import app#, db
 from application.models import Char
 import requests
 
@@ -19,9 +19,9 @@ def index():
     character = str(wep.text) + "," + str(element.text)
     name = requests.post("http://service4:5003/name", data=character)
 
-    add_char = Char(wep=wep.text, element=element.text, name=name.text)
-    db.session.add(add_char)
-    db.session.commit()
+    #add_char = Char(wep=wep.text, element=element.text, name=name.text)
+    #db.session.add(add_char)
+    #db.session.commit()
 
 
     return render_template('index.html', wep=wep.text, element=element.text, name=name.text)

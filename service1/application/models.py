@@ -1,4 +1,4 @@
-from application import db
+#from application import db
 
 class Char(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)

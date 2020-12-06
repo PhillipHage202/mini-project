@@ -1,6 +1,5 @@
 #!/bin/bash
-#export DATABASE_URI: ${DATABASE_URI}
-#export SECRET_KEY: ${MY_SECRET_KEY}
+
 
 docker build -f testing/Dockerfile -t testing-image .
 docker run -it -d --name testing-container testing-image

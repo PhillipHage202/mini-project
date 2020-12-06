@@ -24,4 +24,5 @@ def index():
     #db.session.commit()
 
 
+
     return render_template('index.html', wep=wep.text, element=element.text, name=name.text)

@@ -1,5 +1,5 @@
 [swarm-managers]
-swarm-manager
+manager
 
 [swarm-managers:vars]
 ansible_user=jenkins
@@ -9,7 +9,7 @@ ansible_python_interpreter=/usr/bin/python3
 
 [swarm-workers]
 swarm-worker1
-swarm-worker2
+
 
 [swarm-workers:vars]
 ansible_user=jenkins

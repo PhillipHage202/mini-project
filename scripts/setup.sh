@@ -1,4 +1,5 @@
 git clone https://github.com/PhillipHage202/practical-project.git
-cd practical-project
+
 echo $PATH
+ls
 sudo ansible-playbook -i inventory playbook.yaml

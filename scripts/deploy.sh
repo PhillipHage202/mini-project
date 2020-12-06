@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ssh swarm-manager  <<-EOF
+ssh peehage202@34.89.4.21  <<-EOF
 
 docker pull phage2022/service1:latest
 docker pull phage2022/service2:latest

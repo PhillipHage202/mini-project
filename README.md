@@ -27,8 +27,9 @@ In addition to what has been set out in the brief, I am also required to include
 •	The project must make use of a reverse proxy to make your application accessible to the user.
 
 
+### Architecture
 
-![ Architecture](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/artchi.png)
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/artchi.png)
 
 I must create 4 services which communicates as one service. My application is a random dnd character generator. 
 
@@ -36,7 +37,7 @@ I must create 4 services which communicates as one service. My application is a 
 
 •	Service 4 combines service 2 and 3 then generates a random name and 'post' them over to service 1.
 
-## All  relevant images of the project can be found in the documents in the repo, this includes:
+
 
 ### ERD diagram
 
@@ -52,9 +53,9 @@ I must create 4 services which communicates as one service. My application is a 
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/risk.png)
 
 ### Testing 
-###This is my first testing for service 1:
+### This is my first testing for service 1:
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser1.png)
-###This is the the 2nd version
+### This is the the 2nd version of service 1:
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser1%20ver2.png)
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser2.png)
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser3.png)

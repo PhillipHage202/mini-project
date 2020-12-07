@@ -36,6 +36,12 @@ I must create 4 services which communicates as one service. My application is a 
 •	Service 1 sends a ‘get’ request to service 2 (weapon) and 3 (element power).
 
 •	Service 4 combines service 2 and 3 then generates a random name and 'post' them over to service 1.
+### VSC
+The use of VSC was important as it manages the codes repository and it can push up changes to the master branch which contains the entire application which is saved into one place and it can also track any code that get pushed in.
+### Docker
+Docker was used in this project as it a useful tool. It can create images using a Dockerfile, containerize application and run it with a single command, this is called docker-compose. Docker swarm was also used which is a orchestration tool that creates networks between the manager nodes and worker nodes to share the workload and act as an backup. This is important for rolling updates utilsing volumes as makes additional replicas for the update to run without interfering the user experience.
+### Jenkins
+Jenkins was used as a CI server for this project. Jenkins is the central hub of automation, development and deployment of the application. Jenkinsfile was used to create the automated pipeline. Unfortunetly, my pipeline was unsuccessful due to an error while trying to implement ansible (see image below) however, before ansible i manged to deploy my application with ease using only the 'test', 'build', and 'deploy' Jenkinsfile.  
 
 
 
@@ -48,6 +54,9 @@ I must create 4 services which communicates as one service. My application is a 
 
 ![Trello](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/trello.png)
 
+### CI/CD
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/cicdd.png)
+
 ### Risk assessment
 
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/risk.png)
@@ -56,9 +65,12 @@ I must create 4 services which communicates as one service. My application is a 
 ### This is my first testing for service 1:
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser1.png)
 ### This is the the 2nd version of service 1:
-![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser1%20ver2.png)
-![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser2.png)
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser1%20ver2.png) 
+### Service 2:
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser2.png) 
+### Service 3
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser3.png)
+### Service 4:
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser4%20ver2.png)
 
 ### Front-End Design

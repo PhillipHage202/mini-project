@@ -2,7 +2,7 @@
 # QA-Practical-Project
 
 # Brief
-The brief provided to us for this project sets the following out as its overall objective: To create a service-orientated architecture application, which must be composed of at least 4 services that works together. The services must be deployed by using docker to containerized the services and using docker swarm as a orchestration tool to deploy it out to the cluster. 
+The brief provided to us for this project sets the following out as its overall objective: To create a service-orientated architecture application, which must be composed of at least 4 services that works together. 
 
 
 In addition to what has been set out in the brief, I am also required to include the following:
@@ -31,15 +31,18 @@ In addition to what has been set out in the brief, I am also required to include
 
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/artchi.png)
 
-I must create 4 services which communicates as one service. My application is a random dnd character generator. 
+My application is a random dnd character generator. which has 4 services.
 
-•	Service 1 sends a ‘get’ request to service 2 (weapon) and 3 (element power).
+•	At its core Service 1 renders Jinja2 templates and sends a ‘get’ request to service 2 and 3 which generates random objects (weapon and element)
 
-•	Service 4 combines service 2 and 3 then generates a random name and 'post' them over to service 1.
+•	Service 4 combines service 2 and 3 based on pre-defined results then generates a random name and 'post' them over to service 1.
+
 ### VSC
-The use of VSC was important as it manages the codes repository and it can push up changes to the master branch which contains the entire application which is saved into one place and it can also track any code that get pushed in.
+The use of VSC was important as it manages the codes repository and it can push up changes to the master branch which contains the entire application which is saved into one place and it can also track any code that gets pushed in.
+
 ### Docker
 Docker was used in this project as it a useful tool. It can create images using a Dockerfile, containerize application and run it with a single command, this is called docker-compose. Docker swarm was also used which is a orchestration tool that creates networks between the manager nodes and worker nodes to share the workload and act as an backup. This is important for rolling updates utilsing volumes as makes additional replicas for the update to run without interfering the user experience.
+
 ### Jenkins
 Jenkins was used as a CI server for this project. Jenkins is the central hub of automation, development and deployment of the application. Jenkinsfile was used to create the automated pipeline. Unfortunetly, my pipeline was unsuccessful due to an error while trying to implement ansible (see image below) however, before ansible i manged to deploy my application with ease using only the 'test', 'build', and 'deploy' Jenkinsfile.  
 
@@ -99,9 +102,11 @@ There are several improvements I would like to implement:
 
 
 •	Try to fix the issue with ansible then the ci/cd pipeline will be completed
-
 •	Add an image when the random character is generated 
 •	HTML styling for better looks
+•	Implement Nginx
+•	Implement Nexus
+
 
 
 

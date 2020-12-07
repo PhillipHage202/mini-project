@@ -3,5 +3,5 @@
     state: join
     remote_addrs: [ "manager:2377" ]  
     advertise_addr: "worker"
-    join_token: "{{ hostvars['token']['value'] }}"
+    join_token: "{{ hostvars['jenkins']['value'] }}"
     gather_facts: True

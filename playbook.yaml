@@ -5,13 +5,13 @@
   - common
 
 - name: Setup manager
-  hosts: swarm-managers
+  hosts: manager
   become: yes
   roles:
   - manager
 
 - name: Setup workers
-  hosts: swarm-workers
+  hosts: worker
   become: yes
   roles:
   - worker 

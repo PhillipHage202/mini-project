@@ -1,5 +1,5 @@
 from flask import render_template
-from application import app#, db
+from application import app, db
 from application.models import Char
 import requests
 

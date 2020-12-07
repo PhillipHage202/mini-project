@@ -1,5 +1,5 @@
 [swarm-managers]
-manager
+10.154.0.24
 
 [swarm-managers:vars]
 ansible_user=jenkins

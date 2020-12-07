@@ -6,22 +6,22 @@ import requests
 @app.route('/', methods=['GET'])
 def home():
     char_data = Char.query.all()
-    return render_template('index.html', chars=char_data)
+    return render_template('index.html'), chars=char_data)
 
 
 @app.route('/get_char', methods=['GET'])
 def index():
-    #gets a wep
+    gets a wep
     wep = requests.get("http://service2:5001/wep")
     #gets element
-    element = requests.get("http://service3:5002/element")
+    element = requests.get("http://:service3/element")
     #gets character name
     character = str(wep.text) + "," + str(element.text)
     name = requests.post("http://service4:5003/name", data=character)
 
-    #add_char = Char(wep=wep.text, element=element.text, name=name.text)
-    #db.session.add(add_char)
-    #db.session.commit()
+    add_char = Char(wep=wep.text, element=element.text, name=name.text)
+    db.session.add(add_char)
+    db.session.commit()
 
 
 

@@ -34,7 +34,7 @@ I must create 4 services which communicates as one service. My application is a 
 
 •	Service 1 sends a ‘get’ request to service 2 (weapon) and 3 (element power).
 
-•	Service 4 combines service 2 and 3 then generates a random name and sends them over to service 1.
+•	Service 4 combines service 2 and 3 then generates a random name and 'post' them over to service 1.
 
 ## All  relevant images of the project can be found in the documents in the repo, this includes:
 
@@ -52,9 +52,9 @@ I must create 4 services which communicates as one service. My application is a 
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/risk.png)
 
 ### Testing 
-This is my first testing for service 1:
+###This is my first testing for service 1:
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser1.png)
-This is the the 2nd version
+###This is the the 2nd version
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser1%20ver2.png)
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser2.png)
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/pytest%20cov%20ser3.png)
@@ -62,7 +62,7 @@ This is the the 2nd version
 
 ### Front-End Design
 
-![Home Page](https://github.com/PhillipHage202/QA-Fundemental-Project/blob/main/Documents/home%202.png)
+![Home Page](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/home.png)
 
 ![Add Workout](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/demo%201.png)
 ![Add Session](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/demo%202.png)

@@ -3,5 +3,5 @@
     state: join
     remote_addrs: [ "manager:2377" ]  
     advertise_addr: "worker"
-    join_token: "{{ hostvars['jenkins']['value'] }}"
+    join_token: "{{ hostvars['manager']['swarm_info']['swarm_facts']['JoinTokens']['worker'] }}"
     gather_facts: True

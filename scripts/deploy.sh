@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ssh manager <<-EOF
+ssh 10.154.0.14 <<-EOF
 
 
 git clone https://github.com/PhillipHage202/practical-project.git

@@ -29,13 +29,14 @@ In addition to what has been set out in the brief, I am also required to include
 
 ### Architecture
 
-![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/artchi.png)
-
 My application is a random dnd character generator. which has 4 services.
 
 •	At its core Service 1 renders Jinja2 templates and sends a ‘get’ request to service 2 and 3 which generates random objects (weapon and element)
 
 •	Service 4 combines service 2 and 3 based on pre-defined results then generates a random name and 'post' them over to service 1.
+
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/artchi.png)
+
 
 ### VSC
 The use of VSC was important as it manages the codes repository and it can push up changes to the main branch which contains the entire application which is saved into one place and is easily accessible it can also track any code that gets pushed in.

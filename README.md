@@ -7,13 +7,21 @@ The brief provided to us for this project sets the following out as its overall 
 
 In addition to what has been set out in the brief, I am also required to include the following:
 •	An Asana board (or equivalent Kanban board tech) with full expansion on tasks needed to complete the project.
+
 •	This could also provide a record of any issues or risks that you faced creating your project.
+
 •	An Application fully integrated using the Feature-Branch model into a Version Control System which will subsequently be 
+
 •	built through a CI server and deployed to a cloud-based virtual machine.
+
 •	If a change is made to a code base, then Webhooks should be used so that Jenkins recreates and redeploys the changed application
+
 •	The project must follow the Service-oriented architecture that has been asked for.
+
 •	The project must be deployed using containerisation and an orchestration tool.
+
 •	As part of the project, you need to create an Ansible Playbook that will provision the environment that your application needs to run.
+
 •	The project must make use of a reverse proxy to make your application accessible to the user.
 
 
@@ -41,10 +49,13 @@ The use of VSC was important as it manages the codes repository and it can push 
 ### Docker
 
 Docker was used in this project as it a useful tool. It can create images using a Dockerfile, containerize application and run it with a single command, this is called docker-compose. Docker swarm was also used which is a orchestration tool that creates networks between the manager nodes and worker nodes to share the workload and act as an backup. This is important for rolling updates utilsing volumes as makes additional replicas for the update to run without interfering the user experience.
+
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/docker.png)
 
 ### Jenkins
+
 Jenkins was used as a CI server for this project. Jenkins is the central hub of automation, development and deployment of the application. Jenkinsfile was used to create the automated pipeline. Unfortunetly, my pipeline was unsuccessful due to an error while trying to implement ansible (see Known Issues) however, before ansible I managed to deploy my application with ease using only the 'test', 'build', and 'deploy' scripts from the Jenkinsfile.  
+
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/cicd.png)
 
 ### Risk assessment
@@ -72,7 +83,6 @@ Jenkins was used as a CI server for this project. Jenkins is the central hub of 
 
 
 
-
 ### Known Issues
 
 •	An error while trying to configure ansible
@@ -89,8 +99,11 @@ There are several improvements I would like to implement:
 
 
 •	Try to fix the issue with ansible then the ci/cd pipeline will be completed
+
 •	Add an image when the random character is generated 
+
 •	HTML styling for better looks
+
 •	Implement Nexus
 
 

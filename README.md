@@ -45,7 +45,7 @@ The use of VSC was important as it manages the codes repository and it can push 
 Docker was used in this project as it a useful tool. It can create images using a Dockerfile, containerize application and run it with a single command, this is called docker-compose. Docker swarm was also used which is a orchestration tool that creates networks between the manager nodes and worker nodes to share the workload and act as an backup. This is important for rolling updates utilsing volumes as makes additional replicas for the update to run without interfering the user experience.
 
 ### Jenkins
-Jenkins was used as a CI server for this project. Jenkins is the central hub of automation, development and deployment of the application. Jenkinsfile was used to create the automated pipeline. Unfortunetly, my pipeline was unsuccessful due to an error while trying to implement ansible (see image below) however, before ansible i manged to deploy my application with ease using only the 'test', 'build', and 'deploy' Jenkinsfile.  
+Jenkins was used as a CI server for this project. Jenkins is the central hub of automation, development and deployment of the application. Jenkinsfile was used to create the automated pipeline. Unfortunetly, my pipeline was unsuccessful due to an error while trying to implement ansible (see Known Issues) however, before ansible I managed to deploy my application with ease using only the 'test', 'build', and 'deploy' scripts from the Jenkinsfile.  
 
 
 

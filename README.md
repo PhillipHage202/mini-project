@@ -59,7 +59,7 @@ Jenkins was used as a CI server for this project. Jenkins is the central hub of 
 ![Trello](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/trello.png)
 
 ### CI/CD
-![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/cicdd.png)
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/cicd.png)
 
 ### Risk assessment
 

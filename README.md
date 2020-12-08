@@ -41,6 +41,7 @@ My application is a random dnd character generator. which has 4 services.
 The use of VSC was important as it manages the codes repository and it can push up changes to the master branch which contains the entire application which is saved into one place and it can also track any code that gets pushed in.
 
 ### Docker
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/docker.png)
 Docker was used in this project as it a useful tool. It can create images using a Dockerfile, containerize application and run it with a single command, this is called docker-compose. Docker swarm was also used which is a orchestration tool that creates networks between the manager nodes and worker nodes to share the workload and act as an backup. This is important for rolling updates utilsing volumes as makes additional replicas for the update to run without interfering the user experience.
 
 ### Jenkins

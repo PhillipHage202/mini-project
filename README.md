@@ -105,7 +105,6 @@ There are several improvements I would like to implement:
 •	Try to fix the issue with ansible then the ci/cd pipeline will be completed
 •	Add an image when the random character is generated 
 •	HTML styling for better looks
-•	Implement Nginx
 •	Implement Nexus
 
 

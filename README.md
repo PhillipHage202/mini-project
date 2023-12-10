@@ -54,9 +54,16 @@ Docker was used in this project as it a useful tool. It can create images using 
 
 ### Jenkins
 
-Jenkins was used as a CI server for this project. Jenkins is the central hub of automation, development and deployment of the application. Jenkinsfile was used to create the automated pipeline. Unfortunetly, my pipeline was unsuccessful due to an error while trying to implement ansible (see Known Issues) however, before ansible I managed to deploy my application with ease using only the 'test', 'build', and 'deploy' scripts from the Jenkinsfile.  
+This process is handled by a Jenkins 'pipeline' job with distinct build stages. The design of this type of job means that if a previous build stage fails, the job will fail altogether and provide you with detailed information as to where this occurred. The more modular you make this system, the easier it is to pinpoint where your code is failing. As pictured below, the four build stages are:
 
-![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/cicd.png)
+'Checkout SCM' (pull code from Git respository)
+'Build' (would be more accurately named 'Installation' as Python doesn't require building, in the strictest sense)
+'Test' (run pytest, produce coverage report)
+'Run' (start the flask-app service on the local VM, belonging to systemctl)  
+
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/Jenkin%20pic.png.png)
+
+Once the app is considered stable, it is then pushed to a separate VM for deployment. This service is run using the Python-based HTTP web server Gunicorn, which is designed around the concept of 'workers' who split the CPU resources of the VM equally. When users connect to the server, a worker is assigned to that connection with their dedicated resources, allowing the server to run faster for each user.
 
 ### Risk assessment
 

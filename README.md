@@ -52,6 +52,10 @@ Docker was used in this project as it a useful tool. It can create images using 
 
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/docker.png)
 
+### CI Pipeline
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/ci%20pipeline.png)
+Pictured above is the continuous integration pipeline with the associated frameworks and services related to them. This pipeline allows for rapid and simple development-to-deployment by automating the integration process, i.e. I can produce code on my local machine and push it to GitHub, which will automatically push the new code to Jenkins via a webhook to be automatically installed on the cloud VM. From there, tests are automatically run and reports are produced. A testing environment for the app is also run in debugger mode, allowing for dynamic testing.
+
 ### Jenkins
 
 This process is handled by a Jenkins 'pipeline' job with distinct build stages. The design of this type of job means that if a previous build stage fails, the job will fail altogether and provide you with detailed information as to where this occurred. The more modular you make this system, the easier it is to pinpoint where your code is failing. As pictured below, the four build stages are:

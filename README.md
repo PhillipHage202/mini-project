@@ -52,8 +52,8 @@ Docker was used in this project as it a useful tool. It can create images using 
 
 ![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/docker.png)
 
-### CI Pipeline
-![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/ci%20pipeline.png)
+### CI/CD Pipeline
+![](https://github.com/PhillipHage202/practical-project/blob/main/doc%20for%20pro/cicd%20pipeline.png)
 Pictured above is the continuous integration pipeline with the associated frameworks and services related to them. This pipeline allows for rapid and simple development-to-deployment by automating the integration process, i.e. I can produce code on my local machine and push it to GitHub, which will automatically push the new code to Jenkins via a webhook to be automatically installed on the cloud VM. From there, tests are automatically run and reports are produced. A testing environment for the app is also run in debugger mode, allowing for dynamic testing.
 
 ### Jenkins
@@ -108,8 +108,6 @@ Once the app is considered stable, it is then pushed to a separate VM for deploy
 
 There are several improvements I would like to implement:
 
-
-•	Try to fix the issue with ansible then the ci/cd pipeline will be completed
 
 •	Add an image when the random character is generated 
 

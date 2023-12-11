@@ -94,7 +94,7 @@ Once the app is considered stable, it is then pushed to a separate VM for deploy
 
 
 
-### Known Issues
+### Known Issues then rectified 
 
 •	An error while trying to configure ansible
 
